@@ -1,8 +1,9 @@
 import q from "nikolav-q";
 //
-import map from "lodash/map";
-import noop from "lodash/noop";
 import identity from "lodash/identity";
+import map from "lodash/map";
+import merge from "lodash/merge";
+import noop from "lodash/noop";
 //
 import chartDonut from "./chartDonut";
 import ColorMode from "./color-mode";
@@ -21,6 +22,7 @@ export {
   eventListener,
   identity,
   map,
+  merge,
   moneyFormat,
   moneyFormatDollar,
   noop,

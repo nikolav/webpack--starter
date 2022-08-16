@@ -1,17 +1,17 @@
 ::-moz-selection {
   /* background: #b3d4fc; */
-  background: #b3d4fc;
+  background: #cfdae7;
   text-shadow: none;
-  .dark & {
-    background: #292524;
-  }
+  // .dark & {
+  //   background: #292524;
+  // }
 }
 
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-  .dark & {
-    background: #292524;
-  }
+  // .dark & {
+  //   background: #292524;
+  // }
 }
 
