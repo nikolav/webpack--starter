@@ -11,7 +11,7 @@ export const PAGE__NOT_FOUND = "mjzshdricbd";
 export default class App {
   // render app @this node
   root = null;
-  // setting it with .setState() rebuilds the app
+  // setting state with .setState() rebuilds the app
   state = null;
   // controll color-mode
   colormode = null;
