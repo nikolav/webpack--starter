@@ -80,13 +80,8 @@ export default class App {
     const app = this;
     const page = app.state.activePage;
     //
-    if (PAGE__INDEX === page) {
-      q.on({
-        target: q.s("#b01"),
-        // eslint-disable-next-line
-        run: () => alert(new Date().toLocaleString()),
-      });
-    }
+    if ("bindEvents" in app.pages[page])
+      app.pages[page].bindEvents();
   }
 
   forceRender() {
