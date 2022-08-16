@@ -55,7 +55,10 @@ export default class App {
     `;
   }
 
-  onRender() {}
+  onRender() {
+    // eslint-disable-nex-line
+    console.log(`Page [${this.state.activePage}] rendered.`);
+  }
 
   bindEvents() {}
 
