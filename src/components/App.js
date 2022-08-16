@@ -1,10 +1,11 @@
 /* eslint-disable */
-import { q, eventListener, ColorMode, merge } from "../util";
+import { q, eventListener, ColorMode, merge, has } from "../util";
 import { PageIndex } from "./pages";
 //
 export const EVENT__RENDER = "qspbuxnvwkp";
 export const EVENT__ON_RENDER = "dridbhyaqeq";
 export const PAGE__INDEX = "cmktcykbjjp";
+export const PAGE__NOT_FOUND = "mjzshdricbd";
 //
 export default class App {
   //
@@ -41,11 +42,18 @@ export default class App {
 
   // @render
   render() {
+    const page = this.state.activePage;
+    //
+    if (PAGE__NOT_FOUND === page) {
+      this.render404();
+      return;
+    }
+    //
     this.root.innerHTML = `
       <div>
         <h1>app</h1>
         <section>
-          ${this.pages[this.state.activePage].render()}
+          ${this.pages[page].render()}
         </section>
       </div>
     `;
@@ -58,6 +66,20 @@ export default class App {
   onRender() {
     // eslint-disable-nex-line
     console.log(`Page [${this.state.activePage}] rendered.`);
+  }
+
+  renderPage(pageId = PAGE__INDEX) {
+    this.setState({
+      activePage: has(this.pages, pageId) ? pageId : PAGE__NOT_FOUND,
+    });
+  }
+
+  render404() {
+    this.root.innerHTML = `
+      <div>
+        <p>Page does not exist. Try again.</p>
+      </div>
+    `;
   }
 
   bindEvents() {}
