@@ -22,6 +22,8 @@ export default class App {
   //
   page404 = null;
   //
+  layout = null;
+  //
   constructor(node) {
     this.e = eventListener();
     this.root = node || document.body;
