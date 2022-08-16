@@ -12,7 +12,8 @@
     "build:dev": "yarn run build:css && webpack --mode=development",
     "watch": "webpack --watch",
     "build:css": "tailwindcss -i ./src/tailwind.css -o ./src/style/build.css",
-    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./src/style/build.css --watch"
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./src/style/build.css --watch",
+    "docs": "serve -p 8888 docs"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -44,6 +45,7 @@
     "prettier": "2.7.1",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
+    "serve": "^14.0.1",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.1.8",
     "terser-webpack-plugin": "^5.3.3",

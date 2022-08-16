@@ -21,3 +21,6 @@
 ## prettier /src
 
 `$ yarn run prettier`
+
+## docs
+`$ yarn run docs`
