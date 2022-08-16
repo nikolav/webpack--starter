@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>app</title>
+    <meta name="generator" content="Serif WebPlus X8 (16,0,3,30)">
+    <meta name="viewport" content="width=596">
+    <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
+    <style type="text/css">
+      .OBJ-1,.OBJ-1:link,.OBJ-1:visited { background-image:url('wpimages/wpc6cd03fa_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
+      .OBJ-1:hover { background-position:0px -88px; }
+      .OBJ-1:active,a:link.OBJ-1.Activated,a:link.OBJ-1.Down,a:visited.OBJ-1.Activated,a:visited.OBJ-1.Down,.OBJ-1.Activated,.OBJ-1.Down { background-position:0px -44px; }
+      .OBJ-1:focus { outline-style:none; }
+      button.OBJ-1 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
+      button.OBJ-1:disabled { pointer-events:none; }
+      .OBJ-1.Inline { display:inline-block;position:relative;line-height:normal; }
+      .OBJ-1 span,.OBJ-1:link span,.OBJ-1:visited span { color:#cdcdcd;font-family:"Trebuchet MS",sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:0px;top:14px;width:80px;height:15px;line-height:15px;font-size:11px;display:block;position:absolute;cursor:pointer; }
+      .OBJ-1:hover span { color:#ffffff; }
+      .OBJ-1:active span,a:link.OBJ-1.Activated span,a:link.OBJ-1.Down span,a:visited.OBJ-1.Activated span,a:visited.OBJ-1.Down span,.OBJ-1.Activated span,.OBJ-1.Down span { color:#ffffff; }
+      .OBJ-1.Disabled span,a:link.OBJ-1.Disabled span,a:visited.OBJ-1.Disabled span,a:hover.OBJ-1.Disabled span,a:active.OBJ-1.Disabled span { color:#bfbfbf; }
+      .OBJ-2 { line-height:44px; }
+      .C-1 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:700;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .C-2 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:700;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      a.C-2:link, a:link .C-2 { color:#b0de00;text-decoration:none; }
+      a.C-2:visited, a:visited .C-2 { color:#51800c;text-decoration:none; }
+      a.C-2:hover, a:hover .C-2 { color:#51800c;text-decoration:underline; }
+      a.C-2:active, a:active .C-2 { color:#ff0000;text-decoration:none; }
+      .C-3 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .C-4 { line-height:19.00px;font-family:"Courier New", monospace;font-style:italic;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .C-5 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      a.C-5:link, a:link .C-5 { color:#b0de00;text-decoration:none; }
+      a.C-5:visited, a:visited .C-5 { color:#51800c;text-decoration:none; }
+      a.C-5:hover, a:hover .C-5 { color:#51800c;text-decoration:underline; }
+      a.C-5:active, a:active .C-5 { color:#ff0000;text-decoration:none; }
+      .C-6 { line-height:19.00px;font-family:"Courier New", monospace;font-style:italic;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      a.C-6:link, a:link .C-6 { color:#b0de00;text-decoration:none; }
+      a.C-6:visited, a:visited .C-6 { color:#51800c;text-decoration:none; }
+      a.C-6:hover, a:hover .C-6 { color:#51800c;text-decoration:underline; }
+      a.C-6:active, a:active .C-6 { color:#ff0000;text-decoration:none; }
+      .C-7 { line-height:19.00px;font-family:"Courier New", monospace;font-style:italic;font-weight:normal;color:#7f7f7f;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+      .C-8 { line-height:18.00px;font-family:"Courier New", monospace;font-style:normal;font-weight:normal;color:#7f7f7f;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+    </style>
+    <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wplightbox.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
+      $('.wplightbox').wplightbox(
+      {"loadBtnSrc":"wpimages/lightbox_load.gif","playBtnSrc":"wpimages/lightbox_play.png","playOverBtnSrc":"wpimages/lightbox_play_over.png","pauseBtnSrc":"wpimages/lightbox_pause.png","pauseOverBtnSrc":"wpimages/lightbox_pause_over.png","border_e":"wpimages/lightbox_e_6.png","border_n":"wpimages/lightbox_n_6.png","border_w":"wpimages/lightbox_w_6.png","border_s":"wpimages/lightbox_s_6.png","border_ne":"wpimages/lightbox_ne_6.png","border_se":"wpimages/lightbox_se_6.png","border_nw":"wpimages/lightbox_nw_6.png","border_sw":"wpimages/lightbox_sw_6.png","closeBtnSrc":"wpimages/lightbox_close_2.png","closeOverBtnSrc":"wpimages/lightbox_close_over_2.png","nextBtnSrc":"wpimages/lightbox_next_2.png","nextOverBtnSrc":"wpimages/lightbox_next_over_2.png","prevBtnSrc":"wpimages/lightbox_prev_2.png","prevOverBtnSrc":"wpimages/lightbox_prev_over_2.png","blankSrc":"wpscripts/blank.gif","bBkgrndClickable":true,"strBkgrndCol":"#000000","nBkgrndOpacity":0.5,"strContentCol":"#ffffff","nContentOpacity":0.8,"strCaptionCol":"#555555","nCaptionOpacity":1.0,"nCaptionType":1,"bCaptionCount":true,"strCaptionFontType":"Tahoma,Serif","strCaptionFontCol":"#ffffff","nCaptionFontSz":15,"bShowPlay":true,"bAnimateOpenClose":true,"nPlayPeriod":2000}
+      );
+      });
+    </script>
+  </head>
+  <body style="height:1654px;background:#cdcdcd;">
+    <div id="divMain" style="background:#393939;margin-left:auto;margin-right:auto;position:relative;width:596px;height:1630px;top:12px;">
+      <div style="position:absolute;left:0px;top:0px;width:596px;height:84px;">
+        <a href="index.html" id="nav_2_B1" class="OBJ-1 ActiveButton Down OBJ-2" style="display:block;position:absolute;left:511px;top:5px;width:80px;height:44px;">
+          <span>docs</span>
+        </a>
+      </div>
+      <div style="position:absolute;left:15px;top:92px;width:566px;height:1484px;overflow:hidden;">
+        <p class="Body"><span class="C-1">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:640,&quot;height&quot;:520}" class="wplightbox C-2" href="2022-08-16%2023_15_11-Window.jpg">package.json</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> includes standard modern js build stack, <span class="C-4">babel, webpack, eslint, prettier</span>. <span class="C-4">css</span> gets processed with <span class="C-4">postcss, </span>sass and tailwindcss included as well.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:640,&quot;height&quot;:520}" class="wplightbox C-5" href="2022-08-16%2023_20_18-Window.jpg">App</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> loads App class and css in /src</span></p>
+        <p class="Body"><span class="C-3">-<wbr> simulates reactjs concepts by maintaining <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_24_41-Window.jpg">local state</a> and syncing ui based on state updates. `<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:248,&quot;height&quot;:200}" class="wplightbox C-6" href="2022-08-16%2023_30_12-Window.jpg">app.e</a>` field is simple event-<wbr>listener implementation for registering and triggering events.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_31_45-Window.jpg">render</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> gets called whenever `.<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_33_58-Window.jpg">setState</a>` is called to render new ui based on updated state. it basically renders page html implementing <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_36_13-Window.jpg">simple router </a>based on state flag `.active` which is current page selected through ui.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_38_01-Window.jpg">pages</a>, and assets</span></p>
+        <p class="Body"><span class="C-3">-<wbr> pages are implemented as 'component methods' and return html to render. <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_39_34-Window.jpg">icons</a> are implemented as methods on App and return svgs to render. images are not used but ive <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_41_03-Window.jpg">configured weback</a> to recognize that sort of asset.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_46_27-Window.jpg">calculations</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> for running tax calculation ive used retail rates in small sale..</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#styles, css</span></p>
+        <p class="Body"><span class="C-3">-<wbr> for styling used <span class="C-4">normalize</span> reset, tailwind, some <span class="C-4">scss</span>. tailwind gets exorted in /<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_49_39-Window.jpg">styles</a> and folder gets imported in /src/index.js.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#color mode</span></p>
+        <p class="Body"><span class="C-3">-<wbr> for dark mode ive used tailwind `.<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_52_01-Window.jpg">class</a>` option to namespace classes under .<span class="C-4">documentElement, </span>and use <span class="C-7">dark:</span> variant to apply in styles. when &lt;html&gt; gets <span class="C-7">class="dark"</span> color mode classes get applied. implemented simple <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:600,&quot;height&quot;:620}" class="wplightbox C-5" href="2022-08-16%2023_55_51-Window.jpg">color-<wbr>mode class</a> for switching dark mode state, which gets synced with user <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-16%2023_59_00-Window.jpg">'prefers-<wbr>color-<wbr>mode'</a> preference. methods <span class="C-7">.setDark .setLight</span> toggle class <span class="C-7">.dark</span><span class="C-4"> </span>and set <span class="C-4">localStorage</span> flag to set color-<wbr>mode on first page load.</span></p>
+        <p class="Body"><span class="C-3"><br></span></p>
+        <p class="Body"><span class="C-3">#chart</span></p>
+        <p class="Body"><span class="C-3">-<wbr> draw pie chart with d3. it <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-17%2000_05_03-Window.jpg">takes data array</a> with key-<wbr>value pairs <span class="C-7">[{ [key: string]: value: number }];</span> function .<span class="C-7">chartDonut</span><span class="C-4"> </span>takes <span class="C-4">Node</span> to render svg in, data[], and aditional <a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;}" class="wplightbox C-5" href="2022-08-17%2000_07_37-Window.jpg">options</a> for fine-<wbr>tuning.</span></p>
+        <p class="Body"><span class="C-8"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:600,&quot;height&quot;:620}" class="wplightbox C-5" href="2022-08-17%2000_23_37-Window.jpg">pdf download</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> send post request with json calculation to php script @heroku which uses <a href="https://github.com/barryvdh/laravel-dompdf" target="_blank" class="C-6">dompdf</a> laravel plugin to generate pdfs from blade views. <a href="https://github.com/nikolav/basic-auth-laravel-auth-sanctum/blob/main/app/Http/Controllers/PdfController.php" target="_blank" class="C-5">file</a> takes json input .<span class="C-4">calculation</span> and loads <a href="https://github.com/nikolav/basic-auth-laravel-auth-sanctum/blob/f10f88f277f4e4c1b5878e25897dd3534a894e6a/resources/views/pdf/a4.blade.php#L357" target="_blank" class="C-5">blade view</a> to render pdf from.</span></p>
+        <p class="Body"><span class="C-8"><br></span></p>
+        <p class="Body"><span class="C-3">#<a data-lightbox="{&quot;galleryId&quot;:&quot;wplightbox&quot;,&quot;width&quot;:600,&quot;height&quot;:620}" class="wplightbox C-5" href="2022-08-17%2000_08_04-Window.jpg">utils</a></span></p>
+        <p class="Body"><span class="C-3">-<wbr> exported global utility methods from <span class="C-7">/src/util</span></span></p>
+      </div>
+    </div>
+  </body>
+</html>

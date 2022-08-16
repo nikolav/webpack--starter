@@ -33,3 +33,6 @@ https://nikolav.rs/app/122/
 ## prettier /src
 
 `$ yarn run prettier`
+
+## docs
+`$ yarn run docs`
