@@ -18,15 +18,19 @@ export default class App {
   //
   pages = null;
   //
+  activePage = null;
+  //
+  _forceRender = null;
+  //
   constructor(node) {
     this.e = eventListener();
     this.root = node || document.body;
     this.state = {
-      page: PAGE__INDEX,
+      activePage: PAGE__INDEX,
     };
     this.colormode = new ColorMode();
     this.pages = {
-      index: new PageIndex(this),
+      [PAGE__INDEX]: new PageIndex(this),
     };
     //
     this.e.addEventListener(EVENT__RENDER, this.render.bind(this));
@@ -48,7 +52,7 @@ export default class App {
       <div>
         <h1>app</h1>
         <section>
-          ${this.pages.index.render()}
+          ${this.pages[this.state.activePage].render()}
         </section>
       </div>
     `;
@@ -57,4 +61,8 @@ export default class App {
   onRender() {}
 
   bindEvents() {}
+
+  forceRender() {
+    this.setState({ _forceRender: Date.now() });
+  }
 }
