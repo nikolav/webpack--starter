@@ -18,15 +18,12 @@ export default class App {
   //
   pages = null;
   //
-  activePage = null;
-  //
-  _forceRender = null;
-  //
   constructor(node) {
     this.e = eventListener();
     this.root = node || document.body;
     this.state = {
       activePage: PAGE__INDEX,
+      _forceRender: null,
     };
     this.colormode = new ColorMode();
     this.pages = {
@@ -41,8 +38,8 @@ export default class App {
     setTimeout(() => this.e.triggerEvent(EVENT__ON_RENDER));
   }
 
-  setState(newState) {
-    this.state = merge({}, this.state, newState);
+  setState(fields) {
+    this.state = merge({}, this.state, fields);
     this.e.triggerEvent(EVENT__RENDER);
   }
 
