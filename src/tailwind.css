@@ -1,0 +1,53 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
+ @tailwind base;
+
+ /**
+    * This injects Tailwind's component classes and any component classes
+    * registered by plugins.
+    */
+ @tailwind components;
+ 
+ /**
+    * This injects Tailwind's utility classes and any utility classes registered
+    * by plugins.
+    */
+ @tailwind utilities;
+ 
+ /**
+    * Use this directive to control where Tailwind injects the hover, focus,
+    * responsive, dark mode, and other variants of each class.
+    *
+    * If omitted, Tailwind will append these classes to the very end of
+    * your stylesheet by default.
+    */
+ @tailwind variants;
+ 
+ 
+ @layer components {
+   .link {
+     @apply cursor-pointer hover:underline active:text-red-600;
+   }
+   .input-underline {
+     @apply w-full px-0.5 border-0 border-b-2 border-gray-50 focus:ring-0 focus:border-gray-200 placeholder:italic placeholder:opacity-40 !bg-transparent;
+   }
+   .button {
+    @apply p-2 px-4 text-white uppercase transition-colors border-none rounded-lg outline-none cursor-pointer bg-slate-500 hover:bg-slate-900 active:bg-black;
+  }
+  .tabs-left {
+    @apply transition-colors text-center font-bold tracking-wider sm:min-w-[172px] cursor-pointer p-2 px-4 rounded-t-xl border-[1px] border-slate-300 border-b-0 hover:bg-green-200 hover:dark:bg-stone-900/80;
+  }
+  .input-noborder {
+    @apply block w-full outline-none p-2 border-none dark:bg-stone-900/50;
+  }
+  .button-report-type {
+    @apply block w-full transition-colors border-[1px] hover:bg-green-200 active:bg-green-800 active:text-white border-slate-300 shadow-sm py-4 tracking-wider text-lg sm:text-xl md:text-2xl dark:border-stone-800/80 dark:hover:bg-stone-800/80 dark:active:bg-white dark:active:text-black;
+  }
+  .menu-option {
+    @apply hover:bg-slate-50 p-2 pl-8 grow w-full cursor-pointer dark:hover:bg-black/20;
+  }
+ }
+ 
+ 
