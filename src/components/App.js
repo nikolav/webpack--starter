@@ -32,10 +32,6 @@ export default class App {
     //
     this.e.addEventListener(EVENT__RENDER, this.render.bind(this));
     this.e.addEventListener(EVENT__ON_RENDER, this.onRender.bind(this));
-    //
-    this.bindEvents();
-    //
-    setTimeout(() => this.e.triggerEvent(EVENT__ON_RENDER));
   }
 
   setState(fields) {
@@ -53,6 +49,10 @@ export default class App {
         </section>
       </div>
     `;
+    //
+    this.bindEvents();
+    //
+    setTimeout(() => this.e.triggerEvent(EVENT__ON_RENDER));
   }
 
   onRender() {
