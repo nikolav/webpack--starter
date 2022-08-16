@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { q, eventListener, ColorMode, merge, has } from "../util";
-import { PageIndex, Page404 } from "./pages";
+import { PageLayout, PageIndex, Page404 } from "./pages";
 //
 export const EVENT__ON_RENDER = "dridbhyaqeq";
 export const EVENT__RENDER = "qspbuxnvwkp";
@@ -34,6 +34,7 @@ export default class App {
       [PAGE__INDEX]: new PageIndex(this),
     };
     this.page404 = new Page404(this);
+    this.layout = new PageLayout(this);
     //
     this.e.addEventListener(EVENT__RENDER, this.render.bind(this));
     this.e.addEventListener(EVENT__ON_RENDER, this.onRender.bind(this));
@@ -52,22 +53,16 @@ export default class App {
 
   // @render
   render() {
-    const page = this.state.activePage;
+    const app = this;
+    const page = app.state.activePage;
     //
-    if (PAGE__NOT_FOUND === page) return this.render404();
+    if (PAGE__NOT_FOUND === page) return app.render404();
     //
-    this.root.innerHTML = `
-      <div>
-        <h1>app</h1>
-        <section>
-          ${this.pages[page].render()}
-        </section>
-      </div>
-    `;
+    app.root.innerHTML = app.layout.render();
     //
-    this.bindEvents();
+    app.bindEvents();
     //
-    setTimeout(() => this.e.triggerEvent(EVENT__ON_RENDER));
+    setTimeout(() => app.e.triggerEvent(EVENT__ON_RENDER));
   }
 
   onRender() {
@@ -79,7 +74,18 @@ export default class App {
     this.root.innerHTML = this.page404.render();
   }
 
-  bindEvents() {}
+  bindEvents() {
+    const app = this;
+    const page = app.state.activePage;
+    //
+    if (PAGE__INDEX === page) {
+      q.on({
+        target: q.s("#b01"),
+        // eslint-disable-next-line
+        run: () => alert(new Date().toLocaleString()),
+      });
+    }
+  }
 
   forceRender() {
     this.setState({ _forceRender: Date.now() });

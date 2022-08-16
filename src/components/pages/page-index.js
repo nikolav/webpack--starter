@@ -10,7 +10,7 @@ export default class {
     return `
     <div>
       <h4>page index</h4>
-      <p>welcome</p>
+      <button id="b01" class="button">welcome</button>
     </div>      
   `;
   }

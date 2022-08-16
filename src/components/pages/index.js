@@ -1,5 +1,6 @@
 /* eslint-disable */
-import PageIndex from "./page-index";
 import Page404 from "./page-404";
+import PageIndex from "./page-index";
+import PageLayout from "./page-layout";
 
-export { PageIndex, Page404 };
+export { PageLayout, PageIndex, Page404 };
