@@ -13,18 +13,23 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
+  // declare graph nodes
   entry: {
     main: "./src/index.js",
   },
+  // export * @dist
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  // --hmr true
   devServer: {
     hot: true,
     // host: "localhost",
     // static: path,
   },
+  // browser env
   target: "web",
+  // asset import setup
   module: {
     rules: [
       {
@@ -42,6 +47,7 @@ const config = {
       },
     ],
   },
+  // clear dist, mk index.html
   plugins: [
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ["**/*"],
