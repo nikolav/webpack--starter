@@ -1,5 +1,5 @@
 import { transition, interpolate, arc, pie, scaleOrdinal, select } from "d3";
-import map from "./map";
+import map from "lodash/map";
 
 const DEFAULT_CHART_OPTIONS = {
   // chart props

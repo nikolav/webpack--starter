@@ -5,5 +5,5 @@ import "./style/app.scss";
 
 import { App } from "./components";
 
-// eslint-disable-next-line no-new
-new App(document.body);
+App.render();
+

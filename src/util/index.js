@@ -1,26 +1,16 @@
 import q from "nikolav-q";
+//
+import map from "lodash/map";
+import noop from "lodash/noop";
+import identity from "lodash/identity";
+//
 import chartDonut from "./chartDonut";
 import ColorMode from "./color-mode";
 import download from "./download";
-import map from "./map";
-
-const identity = (id) => id;
+import { moneyFormat, moneyFormatDollar } from "./money-format";
+//
 const { eventListener } = q;
 const { add: classAdd, rm: classRemove } = q.class;
-const { noop } = q.func;
-
-const moneyFormat = (number) =>
-  // parse string numerics
-  Number(number)
-    // all numbers get parseInt-ed
-    // so append `.00`
-    .toFixed(2)
-    // place comma if number is followed by groups of 3 numbers ending with .dot
-    // replace @current position
-    .replace(/\d(?=(\d{3})+\.)/g, "$&,");
-
-const moneyFormatDollar = (num) => `$ ${moneyFormat(num)}`;
-
 //
 export {
   chartDonut,
@@ -34,4 +24,5 @@ export {
   moneyFormat,
   moneyFormatDollar,
   noop,
+  q,
 };
