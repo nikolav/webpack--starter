@@ -1,9 +1,10 @@
 /* eslint-disable */
 import { q, eventListener, ColorMode, merge, has } from "../util";
-import { PageIndex } from "./pages";
+import { PageIndex, Page404 } from "./pages";
 //
-export const EVENT__RENDER = "qspbuxnvwkp";
 export const EVENT__ON_RENDER = "dridbhyaqeq";
+export const EVENT__RENDER = "qspbuxnvwkp";
+//
 export const PAGE__INDEX = "cmktcykbjjp";
 export const PAGE__NOT_FOUND = "mjzshdricbd";
 //
@@ -19,6 +20,8 @@ export default class App {
   //
   pages = null;
   //
+  page404 = null;
+  //
   constructor(node) {
     this.e = eventListener();
     this.root = node || document.body;
@@ -30,6 +33,7 @@ export default class App {
     this.pages = {
       [PAGE__INDEX]: new PageIndex(this),
     };
+    this.page404 = new Page404(this);
     //
     this.e.addEventListener(EVENT__RENDER, this.render.bind(this));
     this.e.addEventListener(EVENT__ON_RENDER, this.onRender.bind(this));
@@ -40,14 +44,17 @@ export default class App {
     this.e.triggerEvent(EVENT__RENDER);
   }
 
+  renderPage(pageId = PAGE__INDEX) {
+    this.setState({
+      activePage: has(this.pages, pageId) ? pageId : PAGE__NOT_FOUND,
+    });
+  }
+
   // @render
   render() {
     const page = this.state.activePage;
     //
-    if (PAGE__NOT_FOUND === page) {
-      this.render404();
-      return;
-    }
+    if (PAGE__NOT_FOUND === page) return this.render404();
     //
     this.root.innerHTML = `
       <div>
@@ -68,18 +75,8 @@ export default class App {
     console.log(`Page [${this.state.activePage}] rendered.`);
   }
 
-  renderPage(pageId = PAGE__INDEX) {
-    this.setState({
-      activePage: has(this.pages, pageId) ? pageId : PAGE__NOT_FOUND,
-    });
-  }
-
   render404() {
-    this.root.innerHTML = `
-      <div>
-        <p>Page does not exist. Try again.</p>
-      </div>
-    `;
+    this.root.innerHTML = this.page404.render();
   }
 
   bindEvents() {}

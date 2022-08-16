@@ -10,7 +10,7 @@ import ColorMode from "./color-mode";
 import download from "./download";
 import { moneyFormat, moneyFormatDollar } from "./money-format";
 //
-const { eventListener } = q;
+const { eventListener, has } = q;
 const { add: classAdd, rm: classRemove } = q.class;
 //
 export {
@@ -20,6 +20,7 @@ export {
   ColorMode,
   download,
   eventListener,
+  has,
   identity,
   map,
   merge,
