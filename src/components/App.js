@@ -75,7 +75,7 @@ export default class App {
   }
 
   onRender() {
-    // eslint-disable-nex-line
+    // eslint-disable-next-line
     console.log(`Page [${this.state.activePage}] rendered.`);
   }
 
