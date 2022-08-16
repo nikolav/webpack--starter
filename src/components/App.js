@@ -9,37 +9,44 @@ export const PAGE__INDEX = "cmktcykbjjp";
 export const PAGE__NOT_FOUND = "mjzshdricbd";
 //
 export default class App {
-  //
+  // render app @this node
   root = null;
-  //
+  // setting it with .setState() rebuilds the app
   state = null;
-  //
+  // controll color-mode
   colormode = null;
-  //
+  // simple dispatcher
   e = null;
-  //
+  // available pages
   pages = null;
-  //
+  // rener 404 page
   page404 = null;
-  //
+  // page wrapper
   layout = null;
   //
   constructor(node) {
-    this.e = eventListener();
-    this.root = node || document.body;
-    this.state = {
+    const app = this;
+    app.e = eventListener();
+    app.root = node || document.body;
+    // @init state
+    app.state = {
       activePage: PAGE__INDEX,
       _forceRender: null,
     };
-    this.colormode = new ColorMode();
-    this.pages = {
-      [PAGE__INDEX]: new PageIndex(this),
+    // init color-mode service
+    app.colormode = new ColorMode();
+    app.colormode.onColorModeChange((isDark) => {
+      // doStuffOnNewColorMode(isDark)
+    });
+    // cache pages for faster loads
+    app.pages = {
+      [PAGE__INDEX]: new PageIndex(app),
     };
-    this.page404 = new Page404(this);
-    this.layout = new PageLayout(this);
+    app.page404 = new Page404(app);
+    app.layout = new PageLayout(app);
     //
-    this.e.addEventListener(EVENT__RENDER, this.render.bind(this));
-    this.e.addEventListener(EVENT__ON_RENDER, this.onRender.bind(this));
+    app.e.addEventListener(EVENT__RENDER, app.render.bind(app));
+    app.e.addEventListener(EVENT__ON_RENDER, app.onRender.bind(app));
   }
 
   setState(fields) {
@@ -80,8 +87,7 @@ export default class App {
     const app = this;
     const page = app.state.activePage;
     //
-    if ("bindEvents" in app.pages[page])
-      app.pages[page].bindEvents();
+    if ("bindEvents" in app.pages[page]) app.pages[page].bindEvents();
   }
 
   forceRender() {
