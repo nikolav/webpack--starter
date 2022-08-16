@@ -5,9 +5,9 @@ const { noop } = q.func;
 
 const CLASS_DARK = "dark";
 //
-const EVENT_COLOR_MODE_CHANGE = "ezxzkvrlfkb";
-const LOCAL_COLOR_MODE = "ftsjxyvauwz";
-const MODE_DARK = "ddupvfuchad";
+const EVENT_COLOR_MODE_CHANGE = "qzpbcppvpja";
+const LOCAL_COLOR_MODE = "lzjiavpklex";
+const MODE_DARK = "csuwmnlvlmm";
 
 export default class ColorMode {
   // cache current color mode
