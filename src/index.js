@@ -5,5 +5,6 @@ import "./style/app.scss";
 
 import { App } from "./components";
 
-App.render();
+const app = new App();
 
+app.render();
