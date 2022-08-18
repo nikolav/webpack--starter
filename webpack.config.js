@@ -17,6 +17,19 @@ const config = {
     main: "./src/index.js",
   },
   output: {
+    //
+    // provides a template for naming bundles
+    // filename: '[contenthash].bundle.js',
+    filename: "[name].bundle.js",
+    //
+    // provides a template for naming code-split bundles (optional)
+    // chunkFilename: '[contenthash].bundle.js',
+    chunkFilename: "[name].bundle.js",
+    //
+    // load bundles from (optional)
+    // publicPath: 'dist/'
+    //
+    // `path` is the folder where Webpack will place bundles
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
