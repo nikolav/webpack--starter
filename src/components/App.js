@@ -77,7 +77,7 @@ const calcIncomeByPeriod = {
   }),
 };
 
-const APP_GITHUB = "https://github.com/nikolav/122";
+const APP_GITHUB = "https://github.com/nikolav/webpack--starter";
 const API_PDFREPORT_DL = "https://qyhnjtvrhog.herokuapp.com/api/ijlwydmfdeo";
 
 // init colormode switch @this cx
